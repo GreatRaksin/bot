@@ -39,7 +39,7 @@ if "HEROKU" in list(os.environ.keys()):
         return "?", 200
 
 
-    server.run(host="0.0.0.0", port=os.environ.get('PORT', 8000))
+    server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
 else:
     # если переменной окружения HEROKU нету, значит это запуск с машины разработчика.
     # Удаляем вебхук на всякий случай, и запускаем с обычным поллингом.
