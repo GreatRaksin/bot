@@ -35,11 +35,11 @@ if "HEROKU" in list(os.environ.keys()):
     def webhook():
         bot.remove_webhook()
         bot.set_webhook(
-            url="https://min-gallows.herokuapp.com/bot")  # этот url нужно заменить на url вашего Хероку приложения
+            url="https://quiet-atoll-59258.herokuapp.com/")  # этот url нужно заменить на url вашего Хероку приложения
         return "?", 200
 
 
-    server.run(host="0.0.0.0", port=os.environ.get('PORT', 80))
+    server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
 else:
     # если переменной окружения HEROKU нету, значит это запуск с машины разработчика.
     # Удаляем вебхук на всякий случай, и запускаем с обычным поллингом.
